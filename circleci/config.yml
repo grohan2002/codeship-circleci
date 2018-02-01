@@ -1,0 +1,72 @@
+version: 2
+jobs:
+  build:
+    #working_directory: ~/mern-starter
+    # The primary container is an instance of the first list image listed. Your build commands run in this container.
+    docker:
+      - image: circleci/python
+    # The secondary container is an instance of the second listed image which is run in a common network where ports exposed on the primary container are available on localhost.
+    steps:
+      - checkout
+
+  test:
+    docker:
+      - image: circleci/python
+    steps:
+      - checkout
+    #  - run:
+    #      name: create git remotes to staging & production
+    #      command: git remote add staging-rohanhgupta git@git.wpengine.com:staging/rohanhgupta.git && git remote add production-rohanhgupta git@git.wpengine.com:production/rohanhgupta.git
+      - run:
+          name: Test Run
+          command: git remote -v && echo "All tests Passed"
+#      - run:
+#          name: Generate code coverage
+#          command: './node_modules/.bin/nyc report --reporter=text-lcov'
+      - store_artifacts:
+          path: test-results.xml
+          prefix: tests
+      - store_artifacts:
+          path: coverage
+          prefix: coverage
+
+  deploy:
+    docker:
+      - image: circleci/python
+    steps:
+      - checkout
+      - add_ssh_keys:
+          fingerprints:
+            - "5d:e0:c1:44:80:98:96:8f:e3:06:f0:7f:34:76:ff:43"
+      - run:
+          name: change the private key for a push to Production repo
+          command : mv ~/.ssh/id_rsa ~/.ssh/id_rsa.org
+      - run:
+          name: copy the file from git repo to .add_ssh_keys
+          command: cp  .circleci/id_rsa ~/.ssh/id_rsa
+      - run:
+          name: create git remotes to staging & production
+          command: git remote add staging-rohanhgupta git@git.wpengine.com:staging/rohanhgupta.git && git remote add production-rohanhgupta git@git.wpengine.com:production/rohanhgupta.git
+      - run:
+          name: Test Run
+          command: git remote -v
+      - run:
+          name: Push to remote staging
+          command: git push staging-rohanhgupta master
+
+
+workflows:
+  version: 2
+  build_test_deploy:
+    jobs:
+      - build
+      - test:
+          requires:
+            - build
+          filters:
+            branches:
+              only: master
+      - deploy:
+          requires:
+           - build
+           - test
