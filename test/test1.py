@@ -5,10 +5,11 @@ class SearchText(unittest.TestCase):
     def setUp(self):
         # create a new Firefox session
         self.driver = webdriver.Firefox()
-        self.driver.implicitly_wait(30)
+        self.driver.implicit_wait(30)
         self.driver.maximize_window()
         # navigate to the application home page
-        self.driver.get("http://orionlabs123.staging.wpengine.com/")
+        #self.driver.get("http://orionlabs123.staging.wpengine.com/")
+        self.driver.get("https://www.orionlabs.io/")
 
 
     #def test_example(self):
@@ -20,7 +21,7 @@ class SearchText(unittest.TestCase):
 
 
 
-    def test_search_by_id(self):
+    def shop-validate(self):
         # get the search textbox
         self.search_field = self.driver.find_element_by_id("menu-item-3084")
 
