@@ -1,0 +1,28 @@
+1517567786084	geckodriver	INFO	geckodriver 0.19.1
+1517567786089	geckodriver	INFO	Listening on 127.0.0.1:51647
+1517567787346	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-profile" "/tmp/rust_mozprofile.DixADDgxTjyK"
+1517567788358	Marionette	INFO	Enabled via --marionette
+1517567791581	Marionette	INFO	Listening on port 37057
+1517567791665	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://orionlabs123.staging.wpengine.com/wp-content/themes/onyx-two/library/js/mc-validate.js, line 189: TypeError: url is undefined
+[Child 15329, Chrome_ChildThread] WARNING: pipe error (19): Connection reset by peer: file /build/firefox-iXzMln/firefox-58.0+build6/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 353
+[Child 15329, Chrome_ChildThread] WARNING: pipe error (35): Connection reset by peer: file /build/firefox-iXzMln/firefox-58.0+build6/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 353
+[Child 15329, Chrome_ChildThread] WARNING: pipe error (3): Connection reset by peer: file /build/firefox-iXzMln/firefox-58.0+build6/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 353
+1517568661753	geckodriver	INFO	geckodriver 0.19.1
+1517568661756	geckodriver	INFO	Listening on 127.0.0.1:41233
+1517568662943	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-profile" "/tmp/rust_mozprofile.3u3PoDq8Ua7x"
+1517568663853	Marionette	INFO	Enabled via --marionette
+1517568666914	Marionette	INFO	Listening on port 43563
+1517568666975	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://orionlabs123.staging.wpengine.com/wp-content/themes/onyx-two/library/js/mc-validate.js, line 189: TypeError: url is undefined
+[Child 16096, Chrome_ChildThread] WARNING: pipe error (19): Connection reset by peer: file /build/firefox-iXzMln/firefox-58.0+build6/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 353
+[Child 16096, Chrome_ChildThread] WARNING: pipe error (3): Connection reset by peer: file /build/firefox-iXzMln/firefox-58.0+build6/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 353
+1517568791600	geckodriver	INFO	geckodriver 0.19.1
+1517568791615	geckodriver	INFO	Listening on 127.0.0.1:35983
+1517568791833	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-profile" "/tmp/rust_mozprofile.kMAqI5tCleTa"
+1517568793324	Marionette	INFO	Enabled via --marionette
+1517568796914	Marionette	INFO	Listening on port 33579
+1517568796961	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://orionlabs123.staging.wpengine.com/wp-content/themes/onyx-two/library/js/mc-validate.js, line 189: TypeError: url is undefined
+[Child 16436, Chrome_ChildThread] WARNING: pipe error (20): Connection reset by peer: file /build/firefox-iXzMln/firefox-58.0+build6/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 353
+[Child 16436, Chrome_ChildThread] WARNING: pipe error (3): Connection reset by peer: file /build/firefox-iXzMln/firefox-58.0+build6/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 353
