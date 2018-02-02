@@ -21,7 +21,7 @@ class SearchText(unittest.TestCase):
 
 
 
-    def shop-validate(self):
+    def shopValidate(self):
         # get the search textbox
         self.search_field = self.driver.find_element_by_id("menu-item-3084")
 
