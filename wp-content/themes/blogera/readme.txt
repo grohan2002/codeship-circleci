@@ -122,4 +122,5 @@ Theme documentation is available on http://www.zolothemes.com/downloads/blogera-
 
 
 * Initial release
+Nice theme to work with
 
