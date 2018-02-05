@@ -51,15 +51,15 @@
     </div>
   </div>
   <!-- #foter-top -->
-  
+
   <?php } ?>
   <div class="footer-copyright">
     <div class="site-wrapper">
       <div class="site-info">
-        <p> <?php printf( esc_html__( 'Copyright &copy; %1$s %2$s. All Rights Reserved. Blogera by ZOLO Themes', 'blogera' ), date('Y'), get_bloginfo( 'name' ) ); ?></p>
+        <p> <?php printf( esc_html__( 'Copyright &copy; %1$s %2$s. All Rights Reserved.', 'blogera' ), date('Y'), get_bloginfo( 'name' ) ); ?></p>
       </div>
-      <!-- .site-info --> 
-      
+      <!-- .site-info -->
+
     </div>
   </div>
 </footer>
