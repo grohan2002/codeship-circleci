@@ -8,7 +8,8 @@ class ExampleTestCase(unittest.TestCase):
         self.driver = webdriver.Firefox()
         self.driver.implicitly_wait(30)
         #self.driver.maximize_window()
-        self.driver.get("https://www.orionlabs.io/")
+        #self.driver.get("https://www.orionlabs.io/")
+        self.driver.get("http://orionlabs123.staging.wpengine.com/")
 
     def test_search_by_text(self):
         assert "Smart" in self.driver.title
