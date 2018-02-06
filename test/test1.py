@@ -8,11 +8,19 @@ class ExampleTestCase(unittest.TestCase):
         self.driver = webdriver.Firefox()
         self.driver.implicitly_wait(30)
         #self.driver.maximize_window()
+        self.base_url = "http://orionlabs123.staging.wpengine.com/"
         #self.driver.get("https://www.orionlabs.io/")
-        self.driver.get("http://orionlabs123.staging.wpengine.com/")
+        #self.driver.get("http://rohanhgupta.wpengine.com")
 
-    def test_search_by_text(self):
+    def home_page(self):
+        driver = self.driver
+        driver.get(self.base_url)
         assert "Smart" in self.driver.title
+    def test_shop(self):
+        driver = self.driver
+        driver.get(self.base_url + "/shop")
+        assert "Walkie-Talkies" in self.driver.title
+
     def tearDown(self):
         self.driver.quit()
 
