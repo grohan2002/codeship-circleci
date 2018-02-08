@@ -9,8 +9,6 @@ class ExampleTestCase(unittest.TestCase):
         self.driver.implicitly_wait(30)
         #self.driver.maximize_window()
         self.base_url = "http://orionlabs123.staging.wpengine.com/"
-        #self.driver.get("https://www.orionlabs.io/")
-        #self.driver.get("http://rohanhgupta.wpengine.com")
 
     def home_page(self):
         driver = self.driver
