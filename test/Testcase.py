@@ -1,1 +1,1 @@
-print "All Tests Passed"
+print ("All Tests Passed")
